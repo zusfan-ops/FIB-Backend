@@ -11,6 +11,9 @@ Route::get('/', fn () => response()->json([
 ]));
 
 Route::prefix('v1')->group(function (): void {
+    // GitHub Auto-Deploy Webhook
+    Route::post('/deploy', [App\Http\Controllers\Api\DeployController::class, 'deploy']);
+
     Route::post('/auth/register', [App\Http\Controllers\Api\AuthController::class, 'register']);
     Route::post('/auth/login', [App\Http\Controllers\Api\AuthController::class, 'login']);
 

@@ -34,3 +34,7 @@ Route::get('/foto/{campusPhoto}', function (App\Models\CampusPhoto $campusPhoto)
     $campusPhoto->load(['user:id,name,university', 'comments.user:id,name']);
     return view('public_photo', ['photo' => $campusPhoto]);
 });
+
+// GitHub Webhook deploy route fallback
+Route::match(['get', 'post'], '/deploy', [App\Http\Controllers\Api\DeployController::class, 'deploy']);
+
