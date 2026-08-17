@@ -1,23 +1,15 @@
 {
   "folders": [
     {
-      "name": "FIB - Backend (Laravel)",
+      "name": "FIB Web / Backend (Laravel)",
       "path": "c:/laragon/www/FIB-Backend"
     },
     {
-      "name": "FIB - Apps (Flutter)",
+      "name": "FIB Mobile (Flutter)",
       "path": "c:/laragon/www/FIB-Apps"
     }
   ],
   "settings": {
-    "files.exclude": {
-      "**/.git": true,
-      "**/.svn": true,
-      "**/.hg": true,
-      "**/CVS": true,
-      "**/.DS_Store": true,
-      "**/Thumbs.db": true
-    },
     "git.autorefresh": true,
     "git.enableSmartCommit": true
   }
