@@ -23,9 +23,9 @@ Sistem ini mengintegrasikan **Backend RESTful API berbasis Laravel (Sanctum Auth
 Aplikasi mobile **FIB UNDIP** tersedia dalam format APK mandiri yang dapat langsung dipasang di smartphone Android Anda:
 
 * 🚀 **Download APK Resmi Langsung:**  
-  👉 **[Download app-arm64-v8a-release.apk (v1.1.0)](https://github.com/zusfan-ops/FIB-UNDIP/releases/download/v1.1.0/app-arm64-v8a-release.apk)** *(18.6 MB — Rekomendasi Utama)*
-* 🌐 **Halaman Rilis GitHub:**  
-  👉 **[GitHub Releases FIB-UNDIP](https://github.com/zusfan-ops/FIB-UNDIP/releases)**
+  👉 **[Download app-arm64-v8a-release.apk (v1.1.0)](https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-arm64-v8a-release.apk)** *(18.6 MB — Rekomendasi Utama)*  
+  👉 **[Web App / PWA (Browser)](https://fib.undip.test/app/)**  
+  👉 **[GitHub Releases FIB-Backend](https://github.com/zusfan-ops/FIB-Backend/releases)**
 * 💻 **Akses Web App (PWA):**  
   👉 **[https://fib.ordr.my.id/app/](https://fib.ordr.my.id/app/)**
 

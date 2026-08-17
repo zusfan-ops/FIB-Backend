@@ -607,10 +607,10 @@
                     <a href="/app/" class="btn btn-coral">
                         🚀 Akses Web App (PWA)
                     </a>
-                    <a href="https://github.com/zusfan-ops/FIB-UNDIP/releases/download/v1.1.0/app-arm64-v8a-release.apk" class="btn btn-indigo">
+                    <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-arm64-v8a-release.apk" class="btn btn-indigo">
                         📥 Unduh APK Release (v1.1.0)
                     </a>
-                    <a href="https://github.com/zusfan-ops/FIB-UNDIP/releases" target="_blank" class="btn btn-outline">
+                    <a href="https://github.com/zusfan-ops/FIB-Backend/releases" target="_blank" class="btn btn-outline">
                         🐙 GitHub Releases
                     </a>
                 </div>
@@ -787,7 +787,7 @@
                             <td>⭐ <strong>Sangat Direkomendasikan</strong> untuk hampir semua smartphone Android modern (keluaran 2018 ke atas: Samsung, Xiaomi, Oppo, Vivo, Realme, Infinix, Pixel, dll).</td>
                             <td>~18.6 MB</td>
                             <td>
-                                <a href="https://github.com/zusfan-ops/FIB-UNDIP/releases/download/v1.1.0/app-arm64-v8a-release.apk" class="btn btn-coral" style="padding: 6px 12px; font-size: 12px;">
+                                <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-arm64-v8a-release.apk" class="btn btn-coral" style="padding: 6px 12px; font-size: 12px;">
                                     📥 Download (ARM64)
                                 </a>
                             </td>
@@ -798,7 +798,7 @@
                             <td>Untuk smartphone Android tipe lama atau entry-level 32-bit.</td>
                             <td>~16.3 MB</td>
                             <td>
-                                <a href="https://github.com/zusfan-ops/FIB-UNDIP/releases/download/v1.1.0/app-armeabi-v7a-release.apk" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
+                                <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-armeabi-v7a-release.apk" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
                                     📥 Download (ARMv7)
                                 </a>
                             </td>
@@ -809,7 +809,7 @@
                             <td>Untuk emulator Android di PC / Mac (Android Studio Emulator, LDPlayer, NoxPlayer).</td>
                             <td>~20.1 MB</td>
                             <td>
-                                <a href="https://github.com/zusfan-ops/FIB-UNDIP/releases/download/v1.1.0/app-x86_64-release.apk" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
+                                <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-x86_64-release.apk" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
                                     📥 Download (x86_64)
                                 </a>
                             </td>
@@ -820,7 +820,7 @@
                             <td>Berisi bundle seluruh arsitektur prosesor (kompatibel ke semua tipe HP Android).</td>
                             <td>~53.0 MB</td>
                             <td>
-                                <a href="https://github.com/zusfan-ops/FIB-UNDIP/releases/download/v1.1.0/app-release.apk" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
+                                <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-release.apk" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
                                     📥 Download (Universal)
                                 </a>
                             </td>
@@ -840,10 +840,10 @@
                 <a href="/app/" class="btn btn-outline">
                     🚀 Buka Web App
                 </a>
-                <a href="https://github.com/zusfan-ops/FIB-UNDIP/releases/download/v1.1.0/app-arm64-v8a-release.apk" class="btn btn-indigo">
+                <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-arm64-v8a-release.apk" class="btn btn-indigo">
                     📥 Unduh APK Release (v1.1.0)
                 </a>
-                <a href="https://github.com/zusfan-ops/FIB-UNDIP/releases" target="_blank" class="btn btn-coral">
+                <a href="https://github.com/zusfan-ops/FIB-Backend/releases" target="_blank" class="btn btn-coral">
                     🐙 GitHub Releases
                 </a>
             </div>

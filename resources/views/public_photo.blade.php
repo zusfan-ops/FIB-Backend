@@ -293,7 +293,7 @@
 
                     <div class="guest-cta">
                         Ingin memberi <strong>Like ❤️</strong> atau menulis <strong>Komentar 💬</strong>? <br>
-                        <a href="/app/">Buka Aplikasi Web</a> atau <a href="https://github.com/zusfan-ops/jepang/releases">Download APK Android</a> dan masuk dengan akun mahasiswa Anda.
+                        <a href="/app/">Buka Aplikasi Web</a> atau <a href="https://github.com/zusfan-ops/FIB-Backend/releases">Download APK Android</a> dan masuk dengan akun mahasiswa Anda.
                     </div>
                 </div>
             </div>
