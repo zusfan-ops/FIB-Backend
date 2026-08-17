@@ -270,3 +270,5 @@ Semua endpoint privat memerlukan header `Authorization: Bearer <TOKEN>`.
 Perangkat lunak **FIB UNDIP · 桜言葉 (SakuraKotoba)** dikembangkan untuk mendukung kegiatan akademis, perkuliahan sastra Jepang, dan inovasi pendidikan di lingkungan Fakultas Ilmu Budaya Universitas Diponegoro.
 
 <p align="center"><sub>🌸 FIB UNDIP · 桜言葉 (SakuraKotoba) — Program Studi Sastra Jepang Fakultas Ilmu Budaya Universitas Diponegoro · Developed by Zusfan Mashuri</sub></p>
+
+<marquee> 桜言葉 (SakuraKotoba) — Program Studi Sastra Jepang Fakultas Ilmu Budaya Universitas Diponegoro </marquee>
