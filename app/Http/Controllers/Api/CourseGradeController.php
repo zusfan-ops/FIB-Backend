@@ -31,7 +31,7 @@ class CourseGradeController extends ApiController
 
         return $this->ok([
             'grades' => $grades,
-            'by_semester' => $bySemester,
+            'by_semester' => (object) $bySemester->all(),
             'total_credits' => $totalCredits,
             'cumulative_gpa' => $totalCredits > 0 ? round($totalPoints / $totalCredits, 2) : 0,
             'grade_scale' => CourseGrade::GRADE_POINTS,

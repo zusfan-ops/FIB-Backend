@@ -16,6 +16,7 @@ Route::prefix('v1')->group(function (): void {
 
     Route::middleware('auth:sanctum')->group(function (): void {
         Route::get('/auth/me', [App\Http\Controllers\Api\AuthController::class, 'me']);
+        Route::match(['put', 'post'], '/auth/profile', [App\Http\Controllers\Api\AuthController::class, 'updateProfile']);
         Route::post('/auth/logout', [App\Http\Controllers\Api\AuthController::class, 'logout']);
 
         Route::get('/dashboard', [App\Http\Controllers\Api\DashboardController::class, 'index']);
