@@ -18,12 +18,12 @@ Sistem ini mengintegrasikan **Backend RESTful API berbasis Laravel (Sanctum Auth
 
 ---
 
-## 📥 Unduh Aplikasi Android (APK Release v1.2.0)
+## 📥 Unduh Aplikasi Android (APK Release v1.3.0)
 
 Aplikasi mobile **FIB UNDIP** tersedia dalam format APK mandiri yang dapat langsung dipasang di smartphone Android Anda:
 
 * 🚀 **Download APK Resmi Langsung:**  
-  👉 **[Download app-arm64-v8a-release.apk (v1.2.0)](https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.2.0/app-arm64-v8a-release.apk)** *(18.8 MB — Rekomendasi Utama)*  
+  👉 **[Download app-arm64-v8a-release.apk (v1.3.0)](https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.3.0/app-arm64-v8a-release.apk)** *(19.6 MB — Rekomendasi Utama)*  
   👉 **[Web App / PWA (Browser)](https://fib.undip.test/app/)**  
   👉 **[GitHub Releases FIB-Backend](https://github.com/zusfan-ops/FIB-Backend/releases)**
 * 💻 **Akses Web App (PWA):**  
@@ -33,9 +33,9 @@ Aplikasi mobile **FIB UNDIP** tersedia dalam format APK mandiri yang dapat langs
 
 | File APK | Arsitektur CPU | Rekomendasi Penggunaan | Ukuran |
 |---|---|---|---|
-| **`app-arm64-v8a-release.apk`** | **ARM 64-bit** | ⭐ **Sangat Direkomendasikan** untuk hampir semua smartphone Android modern (Samsung, Xiaomi, Oppo, Vivo, Realme, Infinix, Pixel, dll). Ringan dan kencang. | **~18.8 MB** |
-| **`app-armeabi-v7a-release.apk`** | **ARM 32-bit** | Untuk smartphone Android tipe lama atau entry-level 32-bit. | **~16.5 MB** |
-| **`app-x86_64-release.apk`** | **x86 64-bit** | Untuk emulator Android di PC / Mac (Android Studio, LDPlayer, NoxPlayer). | **~20.2 MB** |
+| **`app-arm64-v8a-release.apk`** | **ARM 64-bit** | ⭐ **Sangat Direkomendasikan** untuk hampir semua smartphone Android modern (Samsung, Xiaomi, Oppo, Vivo, Realme, Infinix, Pixel, dll). Ringan dan kencang. | **~19.6 MB** |
+| **`app-armeabi-v7a-release.apk`** | **ARM 32-bit** | Untuk smartphone Android tipe lama atau entry-level 32-bit. | **~17.2 MB** |
+| **`app-x86_64-release.apk`** | **x86 64-bit** | Untuk emulator Android di PC / Mac (Android Studio, LDPlayer, NoxPlayer). | **~21.0 MB** |
 | **`app-release.apk`** | **Universal** | Berisi bundle seluruh arsitektur prosesor Android. | **~56.0 MB** |
 
 ---
@@ -46,13 +46,13 @@ Aplikasi mobile **FIB UNDIP** tersedia dalam format APK mandiri yang dapat langs
 ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
 │                                   FIB UNDIP · SAKURAKOTOBA                                      │
 ├─────────────────────┬─────────────────────┬─────────────────────┬───────────────────────────────┤
-│  📅 KALENDER AGENDA │  🚀 UPDATE OTOMATIS │  📸 TIMELINE FOTO   │  🎴 AKADEMIK SASTRA JEPANG    │
-│  & JADWAL KULIAH    │     GITHUB APK      │  & INTERAKSI SOSIAL │     (SRS, READING, BUNGO)     │
+│  📅 KALENDER AGENDA │  🔔 NOTIFIKASI PUSH │  🔊 AUDIO CHOUKAI   │  🎴 AKADEMIK SASTRA JEPANG    │
+│  & JADWAL KULIAH    │     & ALARM 2 JAM   │     (TTS JEPANG)    │     (SRS, READING, BUNGO)     │
 ├─────────────────────┼─────────────────────┼─────────────────────┼───────────────────────────────┤
-│ • Kalender Bulanan  │ • Deteksi Rilis Baru│ • Upload Galeri/Cam │ • SRS Flashcard (SM-2 Algo)   │
-│ • Indikator Warna   │ • Changelog Pop-up  │ • Like & Komentar   │ • Reading Tracker + Clips     │
-│ • Detail Jam Kuliah │ • Unduh 1-Click APK │ • Share ke WhatsApp │ • Grammar Modern & Bungo (文語)│
-│ • Pengingat 2 Jam   │ • Cek Update Manual │ • Link Tamu No-Auth │ • Honyaku Studio Penerjemahan │
+│ • Kalender Bulanan  │ • Alarm Kuliah 2 Jam│ • Audio di Kamus    │ • SRS Flashcard (SM-2 Algo)   │
+│ • Indikator Warna   │ • Daily SRS Streak  │ • Audio di SRS Card │ • Reading Tracker + Clips     │
+│ • Detail Jam Kuliah │ • Status Bar Nyata  │ • Audio di Grammar  │ • Grammar Modern & Bungo (文語)│
+│ • GitHub Auto-Update│ • Sync Alarm HP     │ • Pitch Accent Suara│ • Honyaku Studio Penerjemahan │
 └─────────────────────┴─────────────────────┴─────────────────────┴───────────────────────────────┘
 ```
 
@@ -69,14 +69,26 @@ Aplikasi mobile **FIB UNDIP** tersedia dalam format APK mandiri yang dapat langs
   - 🔵 **Pengingat / Lainnya:** Pengingat penting mahasiswa.
 - **🕒 Panel Rincian Jam Lengkap Saat Tanggal Diklik:** Klik tanggal apa pun di kalender untuk langsung membuka detail jam mulai–selesai, mata kuliah, dosen, ruang gedung FIB UNDIP, dan status pengerjaan.
 - **🔄 Mode Kalender & Mode Daftar:** Pengguna dapat beralih antara tampilan kalender visual dan tampilan list kronologis dengan mudah.
-- **⏰ Fitur Pengingat Otomatis 2 Jam:** Setiap mata kuliah dapat diaktifkan alarm pengingat 2 jam sebelum kelas dimulai.
 
 ---
 
-### 🚀 2. Info & Pembaruan Otomatis APK (GitHub Releases Integration)
+### 🔔 2. Notifikasi Push Lokal & Alarm Terjadwal Android (Notification & Alarm Engine)
+- **⏰ Alarm Nyata Pengingat Kuliah 2 Jam:** Otomatis menjadwalkan notifikasi alarm bersuara dan getar di status bar HP 2 jam sebelum kelas dimulai.
+- **🌸 Pengingat Harian Review Flashcard SRS (Daily Streak):** Mengirimkan notifikasi malam hari (19:30 WIB) jika terdapat kartu hafalan kanji/kosakata yang jatuh tempo untuk direview.
+- **🛠️ Sinkronisasi Otomatis:** Sistem alarm lokal otomatis sinkron saat jadwal kuliah diperbarui.
+
+---
+
+### 🔊 3. Audio Pelafalan Bahasa Jepang Alami (Text-to-Speech Choukai Engine)
+- **🎙️ Tombol Speaker di Kamus Kanji & Kosakata:** Dengarkan pelafalan kanji, kosakata, dan contoh kalimat (*rei-bun*) secara instan.
+- **🎴 Audio di Flashcard SRS (Front & Back):** Membantu mahasiswa melatih daya ingat audio saat latihan review kartu.
+- **📜 Audio pada Tata Bahasa (Grammar & Bungo):** Dengarkan intonasi kalimat pola tata bahasa modern maupun klasik.
+
+---
+
+### 🚀 4. Info & Pembaruan Otomatis APK (GitHub Releases Integration)
 - **⚡ Pengecekan Otomatis Saat Aplikasi Dibuka:** Memeriksa rilis APK terbaru dari GitHub Releases secara cerdas di latar belakang.
 - **📦 Dialog Pembaruan APK Langsung:** Menampilkan changelog rilis, nomor versi baru, ukuran file APK, tombol langsung **"Unduh Update APK"**, serta tautan ke halaman rilis GitHub.
-- **🔍 Fitur Cek Update Manual:** Mahasiswa dapat memeriksa pembaruan secara manual kapan saja melalui menu Profil maupun Fitur & Layanan Kampus.
 
 ---
 
