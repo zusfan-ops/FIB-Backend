@@ -19,8 +19,8 @@ class CampusPhotoController extends ApiController
         $userId = $request->user()?->id;
 
         $query = CampusPhoto::with([
-            'user:id,name,university,jlpt_level',
-            'comments.user:id,name',
+            'user:id,name,university,jlpt_level,study_program,nim,avatar_url',
+            'comments.user:id,name,avatar_url',
         ])->where('is_public', true);
 
         if ($request->filled('category')) {

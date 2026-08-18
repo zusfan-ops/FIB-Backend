@@ -91,5 +91,13 @@ Route::prefix('v1')->group(function (): void {
         Route::post('thesis/milestones', [App\Http\Controllers\Api\ThesisController::class, 'storeMilestone']);
         Route::put('thesis/milestones/{thesisMilestone}', [App\Http\Controllers\Api\ThesisController::class, 'updateMilestone']);
         Route::delete('thesis/milestones/{thesisMilestone}', [App\Http\Controllers\Api\ThesisController::class, 'destroyMilestone']);
+
+        // Chat & Komunikasi Antar Mahasiswa (WhatsApp Style)
+        Route::get('chats', [App\Http\Controllers\Api\ChatController::class, 'index']);
+        Route::get('chats/directory', [App\Http\Controllers\Api\ChatController::class, 'directory']);
+        Route::get('chats/unread-count', [App\Http\Controllers\Api\ChatController::class, 'unreadCount']);
+        Route::get('chats/{recipientId}', [App\Http\Controllers\Api\ChatController::class, 'show']);
+        Route::post('chats/{recipientId}', [App\Http\Controllers\Api\ChatController::class, 'store']);
+        Route::post('chats/{recipientId}/read', [App\Http\Controllers\Api\ChatController::class, 'markAsRead']);
     });
 });

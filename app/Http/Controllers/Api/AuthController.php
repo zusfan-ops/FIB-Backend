@@ -18,18 +18,26 @@ class AuthController extends ApiController
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
             'password' => ['required', 'confirmed', Password::defaults()],
+            'nim' => ['nullable', 'string', 'max:50'],
+            'phone_number' => ['nullable', 'string', 'max:30'],
             'jlpt_level' => ['nullable', 'string', 'in:N1,N2,N3,N4,N5'],
             'university' => ['nullable', 'string', 'max:255'],
             'study_program' => ['nullable', 'string', 'max:255'],
+            'semester' => ['nullable', 'string', 'max:20'],
+            'angkatan' => ['nullable', 'string', 'max:20'],
         ]);
 
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => $validated['password'],
+            'nim' => $validated['nim'] ?? null,
+            'phone_number' => $validated['phone_number'] ?? null,
             'jlpt_level' => $validated['jlpt_level'] ?? null,
             'university' => $validated['university'] ?? null,
             'study_program' => $validated['study_program'] ?? null,
+            'semester' => $validated['semester'] ?? null,
+            'angkatan' => $validated['angkatan'] ?? null,
         ]);
 
         return $this->ok($this->tokenPayload($user), 'Registrasi berhasil', 201);
@@ -64,8 +72,12 @@ class AuthController extends ApiController
 
         $validated = $request->validate([
             'name' => ['sometimes', 'required', 'string', 'max:255'],
+            'nim' => ['nullable', 'string', 'max:50'],
+            'phone_number' => ['nullable', 'string', 'max:30'],
             'university' => ['nullable', 'string', 'max:255'],
             'study_program' => ['nullable', 'string', 'max:255'],
+            'semester' => ['nullable', 'string', 'max:20'],
+            'angkatan' => ['nullable', 'string', 'max:20'],
             'jlpt_level' => ['nullable', 'string', 'in:N1,N2,N3,N4,N5'],
             'bio' => ['nullable', 'string'],
             'avatar' => ['nullable', 'file', 'max:15360'],
