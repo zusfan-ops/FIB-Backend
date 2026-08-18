@@ -18,12 +18,12 @@ Sistem ini mengintegrasikan **Backend RESTful API berbasis Laravel (Sanctum Auth
 
 ---
 
-## 📥 Unduh Aplikasi Android (APK Release v1.1.0)
+## 📥 Unduh Aplikasi Android (APK Release v1.2.0)
 
 Aplikasi mobile **FIB UNDIP** tersedia dalam format APK mandiri yang dapat langsung dipasang di smartphone Android Anda:
 
 * 🚀 **Download APK Resmi Langsung:**  
-  👉 **[Download app-arm64-v8a-release.apk (v1.1.0)](https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-arm64-v8a-release.apk)** *(18.6 MB — Rekomendasi Utama)*  
+  👉 **[Download app-arm64-v8a-release.apk (v1.2.0)](https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.2.0/app-arm64-v8a-release.apk)** *(18.8 MB — Rekomendasi Utama)*  
   👉 **[Web App / PWA (Browser)](https://fib.undip.test/app/)**  
   👉 **[GitHub Releases FIB-Backend](https://github.com/zusfan-ops/FIB-Backend/releases)**
 * 💻 **Akses Web App (PWA):**  
@@ -33,10 +33,10 @@ Aplikasi mobile **FIB UNDIP** tersedia dalam format APK mandiri yang dapat langs
 
 | File APK | Arsitektur CPU | Rekomendasi Penggunaan | Ukuran |
 |---|---|---|---|
-| **`app-arm64-v8a-release.apk`** | **ARM 64-bit** | ⭐ **Sangat Direkomendasikan** untuk hampir semua smartphone Android modern (Samsung, Xiaomi, Oppo, Vivo, Realme, Infinix, Pixel, dll). Ringan dan kencang. | **~18.6 MB** |
-| **`app-armeabi-v7a-release.apk`** | **ARM 32-bit** | Untuk smartphone Android tipe lama atau entry-level 32-bit. | **~16.3 MB** |
-| **`app-x86_64-release.apk`** | **x86 64-bit** | Untuk emulator Android di PC / Mac (Android Studio, LDPlayer, NoxPlayer). | **~20.1 MB** |
-| **`app-release.apk`** | **Universal** | Berisi bundle seluruh arsitektur prosesor Android. | **~53.0 MB** |
+| **`app-arm64-v8a-release.apk`** | **ARM 64-bit** | ⭐ **Sangat Direkomendasikan** untuk hampir semua smartphone Android modern (Samsung, Xiaomi, Oppo, Vivo, Realme, Infinix, Pixel, dll). Ringan dan kencang. | **~18.8 MB** |
+| **`app-armeabi-v7a-release.apk`** | **ARM 32-bit** | Untuk smartphone Android tipe lama atau entry-level 32-bit. | **~16.5 MB** |
+| **`app-x86_64-release.apk`** | **x86 64-bit** | Untuk emulator Android di PC / Mac (Android Studio, LDPlayer, NoxPlayer). | **~20.2 MB** |
+| **`app-release.apk`** | **Universal** | Berisi bundle seluruh arsitektur prosesor Android. | **~56.0 MB** |
 
 ---
 
@@ -46,25 +46,37 @@ Aplikasi mobile **FIB UNDIP** tersedia dalam format APK mandiri yang dapat langs
 ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
 │                                   FIB UNDIP · SAKURAKOTOBA                                      │
 ├─────────────────────┬─────────────────────┬─────────────────────┬───────────────────────────────┤
-│  📅 JADWAL KULIAH   │  📖 CATATAN KAMPUS  │  📸 TIMELINE FOTO   │  🎴 AKADEMIK SASTRA JEPANG    │
-│  & REMINDER 2 JAM   │     & DIARY         │  & INTERAKSI SOSIAL │     (SRS, READING, BUNGO)     │
+│  📅 KALENDER AGENDA │  🚀 UPDATE OTOMATIS │  📸 TIMELINE FOTO   │  🎴 AKADEMIK SASTRA JEPANG    │
+│  & JADWAL KULIAH    │     GITHUB APK      │  & INTERAKSI SOSIAL │     (SRS, READING, BUNGO)     │
 ├─────────────────────┼─────────────────────┼─────────────────────┼───────────────────────────────┤
-│ • Senin–Sabtu Tabs  │ • Mood Mahasiswa    │ • Upload Galeri/Cam │ • SRS Flashcard (SM-2 Algo)   │
-│ • Pengingat 2 Jam   │ • Kategori Kegiatan │ • Like & Komentar   │ • Reading Tracker + Clips     │
-│ • Ruang Gedung FIB  │ • Pin Catatan Utama │ • Share ke WhatsApp │ • Grammar Modern & Bungo (文語)│
-│ • Dosen & Bobot SKS │ • Refleksi Kuliah   │ • Link Tamu No-Auth │ • Honyaku Studio Penerjemahan │
+│ • Kalender Bulanan  │ • Deteksi Rilis Baru│ • Upload Galeri/Cam │ • SRS Flashcard (SM-2 Algo)   │
+│ • Indikator Warna   │ • Changelog Pop-up  │ • Like & Komentar   │ • Reading Tracker + Clips     │
+│ • Detail Jam Kuliah │ • Unduh 1-Click APK │ • Share ke WhatsApp │ • Grammar Modern & Bungo (文語)│
+│ • Pengingat 2 Jam   │ • Cek Update Manual │ • Link Tamu No-Auth │ • Honyaku Studio Penerjemahan │
 └─────────────────────┴─────────────────────┴─────────────────────┴───────────────────────────────┘
 ```
 
 ---
 
-### 📅 1. Jadwal Kuliah FIB UNDIP & Pengingat 2 Jam Sebelum Kelas
-*Dirancang khusus untuk manajemen jadwal perkuliahan mingguan mahasiswa Sastra Jepang FIB Universitas Diponegoro.*
-- **Tab Hari Terorganisir (Senin – Sabtu):** Mengelompokkan mata kuliah berdasarkan hari perkuliahan secara rapi.
-- **Data Perkuliahan Lengkap:** Nama mata kuliah (Choukai, Dokkai, Bunpo, Honyaku, Nihonshi, Nihon Bungaku), dosen pengampu, ruang kelas (Gedung A, B, D FIB UNDIP), bobot SKS, dan rentang jam mulai/selesai.
-- **⏰ Fitur Pengingat Otomatis 2 Jam:** Setiap mata kuliah dapat diaktifkan toggle alarm pengingat yang otomatis memberi notifikasi pengingat 2 jam sebelum jam masuk kelas.
-- **Card Preview di Dashboard:** Menampilkan kuliah hari ini secara langsung di beranda utama aplikasi.
-- **Kalkulator Total SKS:** Menghitung total beban SKS aktif semester berjalan secara otomatis.
+### 📅 1. Jadwal Kuliah & Kalender Interaktif Agenda Mahasiswa
+*Dirancang khusus untuk manajemen jadwal perkuliahan mingguan & agenda kegiatan mahasiswa FIB Universitas Diponegoro.*
+- **📅 Kalender Bulanan Interaktif:** Grid kalender responsif dengan navigasi bulan, pemilih tanggal cepat, serta tombol "Hari Ini".
+- **🎨 Indikator Warna Kategori (Color-Coded Badges & Dots):**
+  - 🟣 **Kuliah Kampus:** Jadwal perkuliahan mingguan (Senin–Sabtu) dengan ruang, dosen, & SKS.
+  - 🔴 **Deadline / UTS / UAS:** Penanda tenggat waktu tugas dan ujian semester.
+  - 🟢 **Tugas & Belajar Mandiri:** Catatan tugas harian dengan checkbox selesai.
+  - 🟠 **Kegiatan & Acara Kampus:** Seminar, bimbingan dosen, atau kegiatan Bunkasai.
+  - 🔵 **Pengingat / Lainnya:** Pengingat penting mahasiswa.
+- **🕒 Panel Rincian Jam Lengkap Saat Tanggal Diklik:** Klik tanggal apa pun di kalender untuk langsung membuka detail jam mulai–selesai, mata kuliah, dosen, ruang gedung FIB UNDIP, dan status pengerjaan.
+- **🔄 Mode Kalender & Mode Daftar:** Pengguna dapat beralih antara tampilan kalender visual dan tampilan list kronologis dengan mudah.
+- **⏰ Fitur Pengingat Otomatis 2 Jam:** Setiap mata kuliah dapat diaktifkan alarm pengingat 2 jam sebelum kelas dimulai.
+
+---
+
+### 🚀 2. Info & Pembaruan Otomatis APK (GitHub Releases Integration)
+- **⚡ Pengecekan Otomatis Saat Aplikasi Dibuka:** Memeriksa rilis APK terbaru dari GitHub Releases secara cerdas di latar belakang.
+- **📦 Dialog Pembaruan APK Langsung:** Menampilkan changelog rilis, nomor versi baru, ukuran file APK, tombol langsung **"Unduh Update APK"**, serta tautan ke halaman rilis GitHub.
+- **🔍 Fitur Cek Update Manual:** Mahasiswa dapat memeriksa pembaruan secara manual kapan saja melalui menu Profil maupun Fitur & Layanan Kampus.
 
 ---
 
