@@ -614,13 +614,6 @@
                         🐙 GitHub Releases
                     </a>
                 </div>
-
-                <div class="demo-box">
-                    <span>🔑 <strong>Akun Demo Cepat:</strong></span>
-                    <div>
-                        <code>demo@nihon.test</code> / <code>password</code>
-                    </div>
-                </div>
             </div>
 
             <!-- Authentic Washi Auth Card -->
@@ -641,23 +634,17 @@
                 <form id="formLogin" onsubmit="handleLogin(event)">
                     <div class="form-group">
                         <label>Email Mahasiswa</label>
-                        <input type="email" id="loginEmail" class="form-control" value="demo@nihon.test" placeholder="nama@students.undip.ac.id" required>
+                        <input type="email" id="loginEmail" class="form-control" placeholder="nama@students.undip.ac.id" required>
                     </div>
 
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" id="loginPass" class="form-control" value="password" placeholder="Password Anda" required>
+                        <input type="password" id="loginPass" class="form-control" placeholder="Password Anda" required>
                     </div>
 
                     <button type="submit" id="btnSubmitLogin" class="btn btn-coral btn-block">
                         Masuk ke Portal
                     </button>
-
-                    <div style="margin-top: 12px; text-align: center;">
-                        <button type="button" onclick="quickFillDemo()" style="background: none; border: none; color: var(--sakura-coral); font-size: 12px; cursor: pointer; text-decoration: underline; font-family: inherit; font-weight: 600;">
-                            ⚡ Isi Cepat Akun Demo (1-Click)
-                        </button>
-                    </div>
                 </form>
 
                 <!-- Form Register -->
@@ -885,11 +872,6 @@
                 formLog.style.display = 'none';
                 formReg.style.display = 'block';
             }
-        }
-
-        function quickFillDemo() {
-            document.getElementById('loginEmail').value = 'demo@nihon.test';
-            document.getElementById('loginPass').value = 'password';
         }
 
         async function handleLogin(e) {
