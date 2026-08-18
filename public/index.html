@@ -659,6 +659,28 @@
                         <input type="email" id="regEmail" class="form-control" placeholder="nama@students.undip.ac.id" required>
                     </div>
 
+                    <div class="form-group">
+                        <label>Program Studi (FIB UNDIP)</label>
+                        <select id="regStudyProgram" class="form-control" required>
+                            <optgroup label="Program Sarjana (S1)">
+                                <option value="S1 Bahasa dan Kebudayaan Jepang" selected>S1 Bahasa dan Kebudayaan Jepang</option>
+                                <option value="S1 Sastra Indonesia">S1 Sastra Indonesia</option>
+                                <option value="S1 Sastra Inggris">S1 Sastra Inggris</option>
+                                <option value="S1 Sejarah">S1 Sejarah</option>
+                                <option value="S1 Ilmu Perpustakaan dan Informasi">S1 Ilmu Perpustakaan dan Informasi</option>
+                                <option value="S1 Antropologi Sosial">S1 Antropologi Sosial</option>
+                            </optgroup>
+                            <optgroup label="Program Magister (S2)">
+                                <option value="S2 Magister Ilmu Susastra">S2 Magister Ilmu Susastra</option>
+                                <option value="S2 Magister Ilmu Linguistik">S2 Magister Ilmu Linguistik</option>
+                                <option value="S2 Magister Ilmu Sejarah">S2 Magister Ilmu Sejarah</option>
+                            </optgroup>
+                            <optgroup label="Program Doktoral (S3)">
+                                <option value="S3 Doktor Sejarah">S3 Doktor Sejarah</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
                     <div class="form-row">
                         <div class="form-group">
                             <label>Target JLPT</label>
@@ -936,6 +958,7 @@
 
             const name = document.getElementById('regName').value.trim();
             const email = document.getElementById('regEmail').value.trim();
+            const study_program = document.getElementById('regStudyProgram').value;
             const jlpt_level = document.getElementById('regJlpt').value;
             const university = document.getElementById('regUniv').value.trim();
             const password = document.getElementById('regPass').value;
@@ -963,7 +986,7 @@
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     },
-                    body: JSON.stringify({ name, email, jlpt_level, university, password, password_confirmation })
+                    body: JSON.stringify({ name, email, study_program, jlpt_level, university, password, password_confirmation })
                 });
 
                 const data = await res.json();

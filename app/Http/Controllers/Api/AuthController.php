@@ -20,6 +20,7 @@ class AuthController extends ApiController
             'password' => ['required', 'confirmed', Password::defaults()],
             'jlpt_level' => ['nullable', 'string', 'in:N1,N2,N3,N4,N5'],
             'university' => ['nullable', 'string', 'max:255'],
+            'study_program' => ['nullable', 'string', 'max:255'],
         ]);
 
         $user = User::create([
@@ -28,6 +29,7 @@ class AuthController extends ApiController
             'password' => $validated['password'],
             'jlpt_level' => $validated['jlpt_level'] ?? null,
             'university' => $validated['university'] ?? null,
+            'study_program' => $validated['study_program'] ?? null,
         ]);
 
         return $this->ok($this->tokenPayload($user), 'Registrasi berhasil', 201);
@@ -63,6 +65,7 @@ class AuthController extends ApiController
         $validated = $request->validate([
             'name' => ['sometimes', 'required', 'string', 'max:255'],
             'university' => ['nullable', 'string', 'max:255'],
+            'study_program' => ['nullable', 'string', 'max:255'],
             'jlpt_level' => ['nullable', 'string', 'in:N1,N2,N3,N4,N5'],
             'bio' => ['nullable', 'string'],
             'avatar' => ['nullable', 'file', 'max:15360'],
