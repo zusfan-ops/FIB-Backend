@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Card;
+use App\Models\ClassSchedule;
 use App\Models\Clip;
 use App\Models\JlptTarget;
 use App\Models\ReviewLog;
@@ -40,11 +41,45 @@ class DashboardController extends ApiController
             ->with('checklistItems')
             ->first();
 
-        $todaySchedule = ScheduleItem::query()
+        $todayDayOfWeek = Carbon::now()->dayOfWeekIso; // 1 = Senin, ..., 7 = Minggu
+
+        $todayClasses = ClassSchedule::query()
+            ->where('user_id', $user->id)
+            ->where('day_of_week', $todayDayOfWeek)
+            ->orderBy('start_time')
+            ->get()
+            ->map(function ($c) {
+                $start = substr($c->start_time, 0, 5);
+                $end = substr($c->end_time, 0, 5);
+                return [
+                    'id' => $c->id,
+                    'title' => $c->subject,
+                    'type' => 'kuliah',
+                    'date' => Carbon::today()->toDateString(),
+                    'time' => $start,
+                    'end_time' => $end,
+                    'course' => ($c->code ? "[$c->code] " : '') . "{$c->credits} SKS",
+                    'location' => $c->room ?? 'FIB UNDIP',
+                    'lecturer' => $c->lecturer,
+                    'notes' => $c->notes,
+                    'priority' => 'high',
+                    'is_done' => false,
+                    'is_class_schedule' => true,
+                ];
+            });
+
+        $todayScheduleItems = ScheduleItem::query()
             ->where('user_id', $user->id)
             ->whereDate('date', Carbon::today())
             ->orderBy('time')
             ->get();
+
+        $allTodaySchedule = $todayClasses->concat($todayScheduleItems)->sortBy(function ($item) {
+            if (is_array($item)) {
+                return $item['time'] ?? '23:59';
+            }
+            return $item->time ?? '23:59';
+        })->values();
 
         $data = [
             'due_cards' => $dueCards,
@@ -66,7 +101,8 @@ class DashboardController extends ApiController
                 'checklist_done' => $activeTarget->checklistItems->where('is_done', true)->count(),
                 'checklist_total' => $activeTarget->checklistItems->count(),
             ] : null,
-            'today_schedule' => $todaySchedule,
+            'today_schedule' => $allTodaySchedule,
+            'today_classes' => $todayClasses,
         ];
 
         return $this->ok($data);
