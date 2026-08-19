@@ -19,8 +19,9 @@ class ClassScheduleController extends ApiController
             ->get();
 
         // Cari jadwal kuliah hari ini yang terdekat (termasuk deteksi pengingat 2 jam sebelum mulai)
-        $todayDayOfWeek = Carbon::now()->dayOfWeekIso; // 1 (Senin) - 7 (Minggu)
-        $currentTime = Carbon::now()->format('H:i:s');
+        $now = Carbon::now(config('app.timezone', 'Asia/Jakarta'));
+        $todayDayOfWeek = $now->dayOfWeekIso; // 1 (Senin) - 7 (Minggu)
+        $currentTime = $now->format('H:i:s');
 
         $upcomingToday = ClassSchedule::where('user_id', $userId)
             ->where('day_of_week', $todayDayOfWeek)

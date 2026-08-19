@@ -28,9 +28,12 @@ class DashboardController extends ApiController
             ->where('state', 'new')
             ->count();
 
+        $now = Carbon::now(config('app.timezone', 'Asia/Jakarta'));
+        $today = Carbon::today(config('app.timezone', 'Asia/Jakarta'));
+
         $reviewsToday = ReviewLog::query()
             ->where('user_id', $user->id)
-            ->whereDate('reviewed_at', Carbon::today())
+            ->whereDate('reviewed_at', $today)
             ->count();
 
         $streak = $this->streakDays($user->id);
@@ -41,21 +44,21 @@ class DashboardController extends ApiController
             ->with('checklistItems')
             ->first();
 
-        $todayDayOfWeek = Carbon::now()->dayOfWeekIso; // 1 = Senin, ..., 7 = Minggu
+        $todayDayOfWeek = $now->dayOfWeekIso; // 1 = Senin, ..., 7 = Minggu
 
         $todayClasses = ClassSchedule::query()
             ->where('user_id', $user->id)
             ->where('day_of_week', $todayDayOfWeek)
             ->orderBy('start_time')
             ->get()
-            ->map(function ($c) {
+            ->map(function ($c) use ($today) {
                 $start = substr($c->start_time, 0, 5);
                 $end = substr($c->end_time, 0, 5);
                 return [
                     'id' => $c->id,
                     'title' => $c->subject,
                     'type' => 'kuliah',
-                    'date' => Carbon::today()->toDateString(),
+                    'date' => $today->toDateString(),
                     'time' => $start,
                     'end_time' => $end,
                     'course' => ($c->code ? "[$c->code] " : '') . "{$c->credits} SKS",
@@ -70,7 +73,7 @@ class DashboardController extends ApiController
 
         $todayScheduleItems = ScheduleItem::query()
             ->where('user_id', $user->id)
-            ->whereDate('date', Carbon::today())
+            ->whereDate('date', $today)
             ->orderBy('time')
             ->get();
 
