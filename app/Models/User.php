@@ -116,4 +116,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(DirectMessage::class, 'receiver_id');
     }
+
+    public function marketplaceProducts(): HasMany
+    {
+        return $this->hasMany(MarketplaceProduct::class);
+    }
 }

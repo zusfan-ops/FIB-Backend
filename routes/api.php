@@ -99,5 +99,10 @@ Route::prefix('v1')->group(function (): void {
         Route::get('chats/{recipientId}', [App\Http\Controllers\Api\ChatController::class, 'show']);
         Route::post('chats/{recipientId}', [App\Http\Controllers\Api\ChatController::class, 'store']);
         Route::post('chats/{recipientId}/read', [App\Http\Controllers\Api\ChatController::class, 'markAsRead']);
+
+        // Toko Mahasiswa/i (Student Marketplace)
+        Route::apiResource('marketplace-products', App\Http\Controllers\Api\MarketplaceController::class)->except(['create', 'edit']);
+        Route::get('my-marketplace-products', [App\Http\Controllers\Api\MarketplaceController::class, 'myProducts']);
+        Route::patch('marketplace-products/{marketplaceProduct}/toggle-sold', [App\Http\Controllers\Api\MarketplaceController::class, 'toggleSold']);
     });
 });
