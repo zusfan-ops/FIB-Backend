@@ -35,6 +35,14 @@ Route::get('/foto/{campusPhoto}', function (App\Models\CampusPhoto $campusPhoto)
     return view('public_photo', ['photo' => $campusPhoto]);
 });
 
+// Shortcut route untuk download APK versi rilis terbaru
+Route::get('/download/apk', function () {
+    return redirect('https://github.com/zusfan-ops/FIB-Backend/releases/latest');
+});
+Route::get('/download/latest', function () {
+    return redirect('https://github.com/zusfan-ops/FIB-Backend/releases/latest');
+});
+
 // GitHub Webhook deploy route fallback
 Route::match(['get', 'post'], '/deploy', [App\Http\Controllers\Api\DeployController::class, 'deploy']);
 

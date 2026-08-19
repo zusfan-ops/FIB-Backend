@@ -192,7 +192,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 50px 0 40px;
+            padding: 46px 0 32px;
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
             gap: 48px;
@@ -215,7 +215,7 @@
 
         .hero-title {
             font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
-            font-size: 38px;
+            font-size: 36px;
             font-weight: 800;
             line-height: 1.25;
             letter-spacing: -0.5px;
@@ -230,7 +230,7 @@
         }
 
         .hero-description {
-            font-size: 15px;
+            font-size: 14.5px;
             color: var(--text-charcoal);
             margin-bottom: 24px;
             line-height: 1.7;
@@ -241,29 +241,6 @@
             gap: 12px;
             flex-wrap: wrap;
             margin-bottom: 24px;
-        }
-
-        .demo-box {
-            padding: 14px 18px;
-            border-radius: 12px;
-            background: #FFFFFF;
-            border: 1px solid var(--border-paper);
-            font-size: 12.5px;
-            color: var(--text-charcoal);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-        }
-
-        .demo-box code {
-            color: var(--sakura-coral);
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 600;
-            background: var(--sakura-soft-bg);
-            padding: 2px 8px;
-            border-radius: 6px;
         }
 
         /* Artisanal Auth Card */
@@ -303,32 +280,29 @@
         .auth-tab.active {
             background: #FFFFFF;
             color: var(--text-sumi);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
         }
 
         .form-group {
-            margin-bottom: 14px;
-            text-align: left;
+            margin-bottom: 16px;
         }
 
         .form-group label {
             display: block;
-            font-size: 11.5px;
+            font-size: 12.5px;
             font-weight: 700;
             color: var(--text-charcoal);
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
+            margin-bottom: 6px;
         }
 
         .form-control {
             width: 100%;
-            background: #FFFFFF;
-            border: 1px solid #D8CFC2;
+            padding: 11px 14px;
             border-radius: 10px;
-            padding: 10px 14px;
+            border: 1px solid var(--border-paper);
+            background: #FFFFFF;
             color: var(--text-sumi);
-            font-size: 14px;
+            font-size: 13.5px;
             font-family: inherit;
             outline: none;
             transition: all 0.2s;
@@ -346,29 +320,79 @@
         }
 
         .alert-box {
-            display: none;
-            padding: 11px 14px;
-            border-radius: 8px;
+            padding: 12px 14px;
+            border-radius: 10px;
             font-size: 12.5px;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
+            display: none;
         }
 
         .alert-error {
             background: #FEF2F2;
-            border: 1px solid #FECACA;
+            border: 1px solid #FCA5A5;
             color: #991B1B;
         }
 
         .alert-success {
-            background: #F0FDF4;
-            border: 1px solid #BBF7D0;
-            color: #166534;
+            background: #ECFDF5;
+            border: 1px solid #6EE7B7;
+            color: #065F46;
         }
 
-        /* Modules Section */
+        /* Disclaimer Banner */
+        .disclaimer-banner {
+            background: #FFFDF7;
+            border: 1px solid #EAD8B1;
+            border-left: 5px solid #D97706;
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin: 20px 0 40px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            box-shadow: 0 4px 14px rgba(217, 119, 6, 0.06);
+        }
+
+        .disclaimer-icon {
+            font-size: 26px;
+            line-height: 1;
+            flex-shrink: 0;
+            padding-top: 2px;
+        }
+
+        .disclaimer-content h4 {
+            font-size: 15px;
+            font-weight: 800;
+            color: #92400E;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .disclaimer-badge {
+            display: inline-block;
+            background: #FEF3C7;
+            color: #B45309;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(180, 83, 9, 0.2);
+        }
+
+        .disclaimer-content p {
+            font-size: 13.5px;
+            color: #5F4B32;
+            line-height: 1.65;
+        }
+
+        /* Module Highlights */
         .section-header {
             text-align: center;
-            margin: 50px 0 26px;
+            max-width: 680px;
+            margin: 0 auto 36px;
         }
 
         .section-header h2 {
@@ -376,20 +400,18 @@
             font-size: 28px;
             font-weight: 800;
             color: var(--text-sumi);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .section-header p {
             color: var(--text-muted);
             font-size: 14.5px;
-            max-width: 680px;
-            margin: 0 auto;
         }
 
         .grid-modules {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 22px;
             margin-bottom: 50px;
         }
 
@@ -398,16 +420,14 @@
             border: 1px solid var(--border-paper);
             border-radius: 16px;
             padding: 24px;
-            transition: all 0.25s ease;
-            box-shadow: 0 4px 12px rgba(60, 45, 35, 0.03);
-            display: flex;
-            flex-direction: column;
+            box-shadow: 0 4px 16px rgba(45, 35, 25, 0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .module-card:hover {
             transform: translateY(-3px);
-            border-color: #D3C5B5;
-            box-shadow: 0 12px 24px rgba(60, 45, 35, 0.07);
+            box-shadow: 0 8px 24px rgba(45, 35, 25, 0.06);
+            border-color: #D8CCC0;
         }
 
         .card-icon-wrap {
@@ -417,32 +437,31 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
-            margin-bottom: 14px;
+            font-size: 20px;
+            margin-bottom: 16px;
         }
 
         .module-card h3 {
-            font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
-            font-size: 17px;
-            font-weight: 700;
+            font-size: 16.5px;
+            font-weight: 800;
             color: var(--text-sumi);
             margin-bottom: 8px;
         }
 
         .module-card p {
-            font-size: 13px;
+            font-size: 13.5px;
             color: var(--text-charcoal);
             line-height: 1.6;
         }
 
-        /* APK Architecture Table */
+        /* Table APK Variants */
         .apk-table-wrap {
             background: #FFFFFF;
             border: 1px solid var(--border-paper);
-            border-radius: 18px;
-            padding: 26px;
-            margin-bottom: 50px;
-            box-shadow: 0 4px 16px rgba(50, 40, 30, 0.03);
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 20px rgba(50, 40, 30, 0.03);
         }
 
         .apk-table-wrap h3 {
@@ -450,12 +469,11 @@
             font-size: 20px;
             font-weight: 800;
             color: var(--text-sumi);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .table-responsive {
             overflow-x: auto;
-            margin-top: 16px;
         }
 
         table.apk-table {
@@ -512,14 +530,14 @@
         /* Footer */
         footer {
             border-top: 1px solid var(--border-paper);
-            padding: 32px 0;
+            padding: 32px 0 40px;
             color: var(--text-muted);
             font-size: 13px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 20px;
         }
 
         footer a {
@@ -537,7 +555,7 @@
                 gap: 32px;
             }
             .hero-title {
-                font-size: 30px;
+                font-size: 29px;
             }
             .grid-modules {
                 grid-template-columns: 1fr;
@@ -546,6 +564,10 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 20px;
+            }
+            .disclaimer-banner {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
@@ -557,7 +579,6 @@
             <div class="header-wrap">
                 <a href="/" class="brand">
                     <div class="logo-emblem">
-                        <!-- Delicate Artisanal Sakura Emblem -->
                         <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M50 50 C48 24, 26 16, 28 34 C30 46, 45 49, 50 50 Z" fill="#E05668"/>
                             <path d="M50 50 C52 24, 74 16, 72 34 C70 46, 55 49, 50 50 Z" fill="#E05668"/>
@@ -580,7 +601,7 @@
                 <div class="header-actions">
                     <div class="badge-live">
                         <div class="dot-live"></div>
-                        API v1.0 Live
+                        <span id="headerReleaseBadge">v1.5.0 Live</span>
                     </div>
                     <a href="/app/" class="btn btn-outline" style="padding: 8px 16px; font-size: 13px;">
                         Buka Web App
@@ -599,18 +620,18 @@
                     Ekosistem Belajar Sastra Jepang & Agenda Perkuliahan <span class="kanji-highlight">桜言葉</span>
                 </h1>
                 <p class="hero-description">
-                    Platform digital terintegrasi mahasiswa Program Studi Sastra Jepang FIB Universitas Diponegoro: 
-                    jadwal kuliah mingguan dengan pengingat otomatis 2 jam sebelum kelas, diary catatan kampus, timeline dokumentasi foto kegiatan (upload galeri/kamera, like, komen, & share WhatsApp), serta modul hafalan kanji Spaced Repetition (SRS SM-2).
+                    Platform digital penunjang studi mahasiswa Program Studi Sastra Jepang FIB Universitas Diponegoro: 
+                    jadwal kuliah mingguan dengan pengingat otomatis 2 jam sebelum kelas, diary catatan kampus, timeline dokumentasi foto kegiatan, modul hafalan kanji Spaced Repetition (SRS SM-2), chat mahasiswa, serta toko marketplace preloved kampus.
                 </p>
 
                 <div class="hero-cta">
                     <a href="/app/" class="btn btn-coral">
                         🚀 Akses Web App (PWA)
                     </a>
-                    <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-arm64-v8a-release.apk" class="btn btn-indigo">
-                        📥 Unduh APK Release (v1.1.0)
+                    <a href="https://github.com/zusfan-ops/FIB-Backend/releases/latest" id="heroDownloadBtn" class="btn btn-indigo">
+                        📥 Unduh APK Release <span class="tag-version">(Terbaru)</span>
                     </a>
-                    <a href="https://github.com/zusfan-ops/FIB-Backend/releases" target="_blank" class="btn btn-outline">
+                    <a href="https://github.com/zusfan-ops/FIB-Backend/releases" target="_blank" class="btn btn-outline github-release-link">
                         🐙 GitHub Releases
                     </a>
                 </div>
@@ -716,10 +737,27 @@
             </div>
         </section>
 
-        <!-- Academic Modules Section (Sama Seperti di GitHub) -->
+        <!-- Disclaimer & Penafian Independensi -->
+        <div class="disclaimer-banner">
+            <div class="disclaimer-icon">⚠️</div>
+            <div class="disclaimer-content">
+                <h4>
+                    Penafian Independensi & Privasi Mahasiswa
+                    <span class="disclaimer-badge">Penting Diketahui</span>
+                </h4>
+                <p>
+                    Sistem <strong>SakuraKotoba (桜言葉)</strong> ini merupakan proyek inisiatif independen yang dibangun untuk membantu mempermudah mahasiswa dalam melakukan manajemen studi, jadwal perkuliahan, agenda kegiatan, serta sarana belajar bahasa dan sastra Jepang. Platform ini <strong>tidak memiliki keterkaitan resmi, bukan produk resmi, dan tidak berafiliasi secara kelembagaan dengan pihak Universitas Diponegoro (UNDIP)</strong>.
+                </p>
+                <p style="margin-top: 8px; font-size: 13px; color: #78350F;">
+                    🔒 <strong>Keamanan & Privasi Data:</strong> Sistem ini tidak meminta, tidak mengintegrasikan, dan <strong>tidak menyimpan data penting/rahasia kemahasiswaan ataupun akun SSO resmi universitas</strong> di dalam server.
+                </p>
+            </div>
+        </div>
+
+        <!-- Academic & Campus Modules Section -->
         <div class="section-header">
             <h2>Layanan & Modul Akademik Sastra Jepang FIB UNDIP</h2>
-            <p>Fitur penunjang studi sastra, kehidupan perkuliahan, dan kemahasiswaan Fakultas Ilmu Budaya Universitas Diponegoro</p>
+            <p>Fitur penunjang studi sastra, kehidupan perkuliahan, dan kemahasiswaan Fakultas Ilmu Budaya</p>
         </div>
 
         <div class="grid-modules">
@@ -733,25 +771,33 @@
 
             <div class="module-card">
                 <div class="card-icon-wrap" style="background: var(--matcha-soft-bg); color: var(--matcha-green);">
-                    📖
+                    💬
                 </div>
-                <h3>2. Catatan Kampus & Diary Mahasiswa</h3>
-                <p>Buku harian perkuliahan untuk menuliskan refleksi materi, catatan bimbingan dosen skripsi, suasana hati (mood tracker), kategori kegiatan, dan sematkan catatan penting (pin to top).</p>
+                <h3>2. Chat & Diskusi Mahasiswa</h3>
+                <p>Fitur komunikasi obrolan langsung antar mahasiswa FIB ala WhatsApp, dilengkapi direktori kontak mahasiswa, pencarian nama/prodi, pengiriman foto, dan badge unread counter.</p>
+            </div>
+
+            <div class="module-card">
+                <div class="card-icon-wrap" style="background: #ECFDF5; color: #047857;">
+                    🛍️
+                </div>
+                <h3>3. Toko Mahasiswa/i (Marketplace)</h3>
+                <p>Pusat jual-beli dan preloved buku modul kuliah, kamus kanji, merchandise Bunkasai, hingga jasa proofreading/les privat antar sesama mahasiswa dengan fitur kontak WA langsung.</p>
             </div>
 
             <div class="module-card">
                 <div class="card-icon-wrap" style="background: var(--sakura-soft-bg); color: var(--sakura-coral);">
                     📸
                 </div>
-                <h3>3. Timeline Foto & Interaksi Sosial</h3>
-                <p>Galeri dokumentasi momen kegiatan mahasiswa (Bunkasai, Seminar Sastra, Praktikum, Wisuda). Upload foto langsung dari galeri HP / kamera, sistem like, komentar antar mahasiswa, share WhatsApp, dan pratinjau publik bebas login.</p>
+                <h3>4. Timeline Foto & Album Kampus</h3>
+                <p>Galeri dokumentasi momen kegiatan mahasiswa (Bunkasai, Seminar Sastra, Praktikum, Wisuda). Upload foto dari galeri/kamera, sistem like, komentar antar mahasiswa, dan share WhatsApp.</p>
             </div>
 
             <div class="module-card">
                 <div class="card-icon-wrap" style="background: var(--gold-soft-bg); color: var(--gold-amber);">
                     🎴
                 </div>
-                <h3>4. SRS Kanji & Kosakata (SM-2)</h3>
+                <h3>5. SRS Kanji & Kosakata (SM-2)</h3>
                 <p>Sistem flashcard berbasis interval memori SuperMemo SM-2 untuk menghafal ribuan Jouyou Kanji sastra secara bertahap dan terukur menuju kelulusan JLPT N5 hingga N1.</p>
             </div>
 
@@ -759,24 +805,16 @@
                 <div class="card-icon-wrap" style="background: #F3E8FF; color: #7E22CE;">
                     📜
                 </div>
-                <h3>5. Reading Tracker & Grammar Bungo</h3>
+                <h3>6. Reading Tracker & Grammar Bungo</h3>
                 <p>Pembaca teks sastra autentik (Natsume Soseki, Dazai Osamu) dengan 1-click text clipping ke flashcard serta referensi tata bahasa sastra klasik (文語 - Bungo era Heian/Edo).</p>
-            </div>
-
-            <div class="module-card">
-                <div class="card-icon-wrap" style="background: #FCE7F3; color: #BE185D;">
-                    ✍️
-                </div>
-                <h3>6. Honyaku Studio (翻訳演習)</h3>
-                <p>Studio latihan penerjemahan teks sastra Jepang ke bahasa Indonesia secara berdampingan (side-by-side) dengan riwayat revisi bertahap dan translator notes.</p>
             </div>
         </div>
 
         <!-- Tabel Varian File APK Android Resmi -->
         <div class="apk-table-wrap">
-            <h3>📥 Daftar Varian File APK Android Resmi (Release v1.1.0)</h3>
+            <h3 id="tableVersionTitle">📥 Daftar Varian File APK Android Resmi <span class="tag-version">(Release Terbaru)</span></h3>
             <p style="color: var(--text-muted); font-size: 13.5px; margin-bottom: 12px;">
-                Pilih varian file installer APK yang sesuai dengan arsitektur smartphone Android Anda untuk performa optimal:
+                Pilih varian file installer APK yang sesuai dengan arsitektur smartphone Android Anda untuk performa optimal. Tautan download otomatis terhubung ke rilis terbaru di GitHub:
             </p>
             <div class="table-responsive">
                 <table class="apk-table">
@@ -794,9 +832,9 @@
                             <td><strong><code>app-arm64-v8a-release.apk</code></strong></td>
                             <td>ARM 64-bit</td>
                             <td>⭐ <strong>Sangat Direkomendasikan</strong> untuk hampir semua smartphone Android modern (keluaran 2018 ke atas: Samsung, Xiaomi, Oppo, Vivo, Realme, Infinix, Pixel, dll).</td>
-                            <td>~18.6 MB</td>
+                            <td><span id="sizeArm64">~19.8 MB</span></td>
                             <td>
-                                <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-arm64-v8a-release.apk" class="btn btn-coral" style="padding: 6px 12px; font-size: 12px;">
+                                <a id="btnArm64" href="https://github.com/zusfan-ops/FIB-Backend/releases/latest" class="btn btn-coral" style="padding: 6px 12px; font-size: 12px;">
                                     📥 Download (ARM64)
                                 </a>
                             </td>
@@ -805,9 +843,9 @@
                             <td><strong><code>app-armeabi-v7a-release.apk</code></strong></td>
                             <td>ARM 32-bit</td>
                             <td>Untuk smartphone Android tipe lama atau entry-level 32-bit.</td>
-                            <td>~16.3 MB</td>
+                            <td><span id="sizeArmv7">~17.5 MB</span></td>
                             <td>
-                                <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-armeabi-v7a-release.apk" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
+                                <a id="btnArmv7" href="https://github.com/zusfan-ops/FIB-Backend/releases/latest" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
                                     📥 Download (ARMv7)
                                 </a>
                             </td>
@@ -816,9 +854,9 @@
                             <td><strong><code>app-x86_64-release.apk</code></strong></td>
                             <td>x86 64-bit</td>
                             <td>Untuk emulator Android di PC / Mac (Android Studio Emulator, LDPlayer, NoxPlayer).</td>
-                            <td>~20.1 MB</td>
+                            <td><span id="sizeX86">~21.3 MB</span></td>
                             <td>
-                                <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-x86_64-release.apk" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
+                                <a id="btnX86" href="https://github.com/zusfan-ops/FIB-Backend/releases/latest" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
                                     📥 Download (x86_64)
                                 </a>
                             </td>
@@ -827,9 +865,9 @@
                             <td><strong><code>app-release.apk</code></strong></td>
                             <td>Universal</td>
                             <td>Berisi bundle seluruh arsitektur prosesor (kompatibel ke semua tipe HP Android).</td>
-                            <td>~53.0 MB</td>
+                            <td><span id="sizeUniversal">~56.2 MB</span></td>
                             <td>
-                                <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-release.apk" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
+                                <a id="btnUniversal" href="https://github.com/zusfan-ops/FIB-Backend/releases/latest" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">
                                     📥 Download (Universal)
                                 </a>
                             </td>
@@ -842,17 +880,17 @@
         <!-- Download Banner -->
         <div class="download-panel">
             <div>
-                <h3>Aplikasi Android Native (Release APK v1.1.0)</h3>
-                <p>Pasang di smartphone Android untuk akses jadwal kuliah cepat, notifikasi pengingat 2 jam, dan upload foto langsung dari kamera/galeri.</p>
+                <h3 id="panelVersionTitle">Aplikasi Android Native <span class="tag-version">(Release APK Terbaru)</span></h3>
+                <p>Pasang di smartphone Android untuk akses jadwal kuliah cepat, notifikasi pengingat 2 jam, toko mahasiswa, chat, dan dokumentasi kampus.</p>
             </div>
             <div style="display: flex; gap: 12px; flex-wrap: wrap;">
                 <a href="/app/" class="btn btn-outline">
                     🚀 Buka Web App
                 </a>
-                <a href="https://github.com/zusfan-ops/FIB-Backend/releases/download/v1.1.0/app-arm64-v8a-release.apk" class="btn btn-indigo">
-                    📥 Unduh APK Release (v1.1.0)
+                <a href="https://github.com/zusfan-ops/FIB-Backend/releases/latest" id="panelDownloadBtn" class="btn btn-indigo">
+                    📥 Unduh APK Release <span class="tag-version">(Terbaru)</span>
                 </a>
-                <a href="https://github.com/zusfan-ops/FIB-Backend/releases" target="_blank" class="btn btn-coral">
+                <a href="https://github.com/zusfan-ops/FIB-Backend/releases" target="_blank" class="btn btn-coral github-release-link">
                     🐙 GitHub Releases
                 </a>
             </div>
@@ -861,8 +899,11 @@
         <!-- Footer -->
         <footer>
             <div>
-                <strong>Fakultas Ilmu Budaya · Universitas Diponegoro</strong><br>
-                <span>Jl. Prof. Soedarto, S.H., Kampus Tembalang, Semarang, Jawa Tengah</span>
+                <strong>FIB · 桜言葉 (SakuraKotoba)</strong><br>
+                <span>Proyek aplikasi manajemen studi & pembelajaran mandiri mahasiswa Fakultas Ilmu Budaya</span><br>
+                <small style="color: #A8A29E; font-size: 11.5px; display: block; margin-top: 5px;">
+                    *Sistem ini tidak berafiliasi secara resmi dengan pihak Universitas Diponegoro dan tidak menyimpan data rahasia/penting universitas.
+                </small>
             </div>
             <div>
                 Dikembangkan oleh <a href="https://zusfan.hallosemarang.com/" target="_blank"><strong>Zusfan Mashuri</strong></a>
@@ -872,6 +913,104 @@
 
     <!-- Scripts -->
     <script>
+        // Auto-fetch latest GitHub release info to keep download links & version labels updated automatically
+        async function updateReleaseLinksFromGitHub() {
+            const repos = ['zusfan-ops/FIB-Backend', 'zusfan-ops/FIB-Apps'];
+            let release = null;
+
+            for (const repo of repos) {
+                try {
+                    const res = await fetch(`https://api.github.com/repos/${repo}/releases/latest`, {
+                        headers: { 'Accept': 'application/vnd.github.v3+json' }
+                    });
+                    if (res.ok) {
+                        release = await res.json();
+                        break;
+                    }
+                } catch (_) {}
+            }
+
+            if (!release) return;
+
+            const tagName = release.tag_name || 'v1.5.0';
+            const releaseUrl = release.html_url || 'https://github.com/zusfan-ops/FIB-Backend/releases';
+            const assets = release.assets || [];
+
+            // Update all version tags and release page links
+            document.querySelectorAll('.tag-version').forEach(el => el.textContent = `(${tagName})`);
+            document.querySelectorAll('.github-release-link').forEach(el => el.href = releaseUrl);
+
+            const badge = document.getElementById('headerReleaseBadge');
+            if (badge) badge.textContent = `${tagName} Live`;
+
+            function formatSize(bytes) {
+                if (!bytes) return '';
+                return `~${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+            }
+
+            let arm64Url = '', arm64Size = '';
+            let armv7Url = '', armv7Size = '';
+            let x86Url = '', x86Size = '';
+            let universalUrl = '', universalSize = '';
+
+            for (const a of assets) {
+                const name = (a.name || '').toLowerCase();
+                const url = a.browser_download_url;
+                const size = formatSize(a.size);
+
+                if (name.includes('arm64-v8a') || (name.includes('arm64') && name.endsWith('.apk'))) {
+                    arm64Url = url;
+                    arm64Size = size;
+                } else if (name.includes('armeabi-v7a') || (name.includes('armv7') && name.endsWith('.apk'))) {
+                    armv7Url = url;
+                    armv7Size = size;
+                } else if (name.includes('x86_64') && name.endsWith('.apk')) {
+                    x86Url = url;
+                    x86Size = size;
+                } else if (name === 'app-release.apk' || (name.includes('universal') && name.endsWith('.apk'))) {
+                    universalUrl = url;
+                    universalSize = size;
+                }
+            }
+
+            const primaryApkUrl = arm64Url || universalUrl || (assets.length > 0 ? assets[0].browser_download_url : releaseUrl);
+
+            const heroBtn = document.getElementById('heroDownloadBtn');
+            if (heroBtn && primaryApkUrl) heroBtn.href = primaryApkUrl;
+
+            const panelBtn = document.getElementById('panelDownloadBtn');
+            if (panelBtn && primaryApkUrl) panelBtn.href = primaryApkUrl;
+
+            if (arm64Url) {
+                const btn = document.getElementById('btnArm64');
+                if (btn) btn.href = arm64Url;
+                const sz = document.getElementById('sizeArm64');
+                if (sz && arm64Size) sz.textContent = arm64Size;
+            }
+            if (armv7Url) {
+                const btn = document.getElementById('btnArmv7');
+                if (btn) btn.href = armv7Url;
+                const sz = document.getElementById('sizeArmv7');
+                if (sz && armv7Size) sz.textContent = armv7Size;
+            }
+            if (x86Url) {
+                const btn = document.getElementById('btnX86');
+                if (btn) btn.href = x86Url;
+                const sz = document.getElementById('sizeX86');
+                if (sz && x86Size) sz.textContent = x86Size;
+            }
+            if (universalUrl) {
+                const btn = document.getElementById('btnUniversal');
+                if (btn) btn.href = universalUrl;
+                const sz = document.getElementById('sizeUniversal');
+                if (sz && universalSize) sz.textContent = universalSize;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateReleaseLinksFromGitHub();
+        });
+
         function switchAuthTab(tab) {
             const tabLog = document.getElementById('tabLoginBtn');
             const tabReg = document.getElementById('tabRegisterBtn');
